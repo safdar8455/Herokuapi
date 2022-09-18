@@ -9,13 +9,9 @@ const port = process.env.PORT || 3000;
 const apiData = require("./data.json");
 
 app.get("/", (req, res) => {
-  res.send("hellow i am live");
+  res.status(200).send(apiData);
 });
 
-app.get("/service", (req, res) => {
-  res.send(apiData);
-});
 
-app.listen(port, () => {
-  console.log("i am live again");
-});
+
+app.listen(port);
